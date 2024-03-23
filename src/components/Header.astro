@@ -1,0 +1,93 @@
+---
+import { BETA_FEATURES } from "../utilities/consts";
+---
+
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="#projects" aria-hidden="true">Projects</a>
+      </li>
+      <li>
+        <a href="#experience" aria-hidden="true">Experience</a>
+      </li>
+      <li>
+        <a href="#education" aria-hidden="true">Education</a>
+      </li>
+    </ul>
+
+    <ul>
+      <!-- TODO: move the svg icons to Astro components to better loading times -->
+      <li aria-label="My GitHub">
+        <a
+          href="https://github.com/adonyssantos"
+          target="_blank"
+          rel="noopener"
+          aria-hiden="true"
+          aria-busy="true"
+        >
+          <img
+            src="/images/github.svg"
+            alt="GitHub Icon"
+            width="32"
+            height="32"
+            aria-hidden="true"
+            onload="this.parentElement.setAttribute('aria-busy', 'false')"
+          />
+        </a>
+      </li>
+      <li aria-label="My LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/adonyssantos/"
+          target="_blank"
+          rel="noopener"
+          aria-hide="true"
+          aria-busy="true"
+        >
+          <img
+            src="/images/linkedin.svg"
+            alt="LinkedIn Icon"
+            width="32"
+            height="32"
+            aria-hidden="true"
+            onload="this.parentElement.setAttribute('aria-busy', 'false')"
+          />
+        </a>
+      </li>
+      {
+        BETA_FEATURES.search && (
+          <li>
+            <input
+              type="search"
+              name="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </li>
+        )
+      }
+    </ul>
+  </nav>
+
+  {
+    BETA_FEATURES.breadcrumbs && (
+      <>
+        <nav aria-label="breadcrumb">
+          <ul>
+            <li>
+              <a href="/home">Home</a>
+            </li>
+            <li>
+              <a href="/projects">Projects</a>
+            </li>
+            <li>Password Manager</li>
+          </ul>
+        </nav>
+        <hgroup>
+          <h2>Page Title</h2>
+          <p>Page descriptiom</p>
+        </hgroup>
+      </>
+    )
+  }
+</header>

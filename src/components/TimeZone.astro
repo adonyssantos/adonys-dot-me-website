@@ -1,0 +1,27 @@
+<hgroup>
+  <p><time id="time-zone" aria-busy="true"></time></p>
+  <p><small>GMT-4</small></p>
+</hgroup>
+
+<script>
+  import { MY_TIMEZONE } from "../utilities/consts";
+
+  function renderTimeInGMTMinus4() {
+    const $timeZone = document.getElementById("time-zone") as HTMLTimeElement;
+    const date = new Date();
+    const utcHours = date.getUTCHours();
+    const gmtMinus4Hours = (utcHours + MY_TIMEZONE + 24) % 24;
+    const emoji =
+      gmtMinus4Hours >= 6 && gmtMinus4Hours < 12
+        ? "🌅"
+        : gmtMinus4Hours >= 12 && gmtMinus4Hours < 18
+          ? "🌞"
+          : "🌜";
+    const timeString = `${emoji} ${gmtMinus4Hours.toString().padStart(2, "0")}:${date.getUTCMinutes().toString().padStart(2, "0")}`;
+    $timeZone.textContent = timeString;
+    $timeZone.setAttribute("aria-busy", "false");
+  }
+
+  renderTimeInGMTMinus4();
+  setInterval(renderTimeInGMTMinus4, 60000);
+</script>
