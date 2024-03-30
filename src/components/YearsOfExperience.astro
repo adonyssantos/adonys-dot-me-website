@@ -1,0 +1,14 @@
+---
+import {
+    START_WORKING_DATE,
+    INACTIVE_WORKING_MONTHS,
+} from "../utilities/consts";
+import { calculateExperienceYears } from "../utilities/functions";
+
+const experienceYears = calculateExperienceYears(
+    START_WORKING_DATE,
+    INACTIVE_WORKING_MONTHS,
+);
+---
+
+<span>{experienceYears} years</span>
