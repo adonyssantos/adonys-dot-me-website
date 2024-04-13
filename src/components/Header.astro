@@ -48,6 +48,8 @@ import { BETA_FEATURES } from "../utilities/consts";
           />
         </a>
       </li>
+      <!-- Color mode switch -->
+      <input name="color-mode" type="checkbox" role="switch" />
       {
         BETA_FEATURES.search && (
           <li>
@@ -85,3 +87,41 @@ import { BETA_FEATURES } from "../utilities/consts";
     )
   }
 </header>
+
+<script>
+  const switchTheme = (event: Event) => {
+    const theme = (event.target as HTMLInputElement)?.checked
+      ? "dark"
+      : "light";
+
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+
+    // if (theme === "dark") {
+    //   event.target.setAttribute("data-theme", "light");
+    // } else {
+    //   event.target.setAttribute("data-theme", "dark");
+    // }
+  };
+
+  const currentTheme = localStorage.getItem("theme");
+  document.documentElement.setAttribute("data-theme", currentTheme ?? "");
+
+  if (currentTheme === "dark") {
+    document
+      .querySelector("input[name=color-mode]")
+      ?.setAttribute("checked", "checked");
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else if (currentTheme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+
+  document
+    .querySelector("input[name=color-mode]")
+    ?.addEventListener("change", switchTheme);
+</script>
