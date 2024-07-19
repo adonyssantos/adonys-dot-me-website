@@ -124,13 +124,16 @@ const t = useTranslations(lang);
 </style>
 
 <script>
-  import { LANGUAGES } from "../i18n/utils";
+  import { DEFAULT_LANG, type LanguageKey, LANGUAGES } from "../i18n/utils";
 
   function handleResize() {
     const $languagePicker = document.querySelector("[data-language-picker]");
-    const currentLanguage = $languagePicker.getAttribute(
-      "data-language-picker",
-    );
+
+    if (!$languagePicker) return;
+
+    const currentLanguage =
+      ($languagePicker.getAttribute("data-language-picker") as LanguageKey) ||
+      DEFAULT_LANG;
 
     $languagePicker.textContent =
       window.innerWidth < 425
