@@ -1,0 +1,22 @@
+---
+import AboutMe from "../sections/AboutMe.astro";
+import Statistics from "../sections/Statistics.astro";
+import Projects from "../sections/Projects.astro";
+import Experience from "../sections/Experience.astro";
+import Education from "../sections/Education.astro";
+import { type LanguageKey, useTranslations } from "../i18n/utils";
+
+type Props = {
+    lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<h1 hidden aria-hidden="true">{t("site.title")}</h1>
+<AboutMe lang={lang} />
+<Statistics lang={lang} />
+<Projects lang={lang} />
+<Experience lang={lang} />
+<Education lang={lang} />

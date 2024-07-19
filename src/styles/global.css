@@ -1,0 +1,22 @@
+* {
+    box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+article {
+    background-color: hsla(221, 25%, 85%, 0.15)
+}
+
+section p img {
+    border-radius: 0.25rem;
+}

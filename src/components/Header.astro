@@ -1,20 +1,28 @@
 ---
+import HeaderLink from "./HeaderLink.astro";
+import LangLink from "./LangLink.astro";
 import { BETA_FEATURES } from "../utilities/consts";
 import GitHubIcon from "./GitHubIcon.astro";
 import LinkedInIcon from "./LinkedInIcon.astro";
+import RssIcon from "./RssIcon.astro";
+import { LANGUAGES, useTranslations, type LanguageKey } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <header>
   <nav>
     <ul>
       <li>
-        <a href="#projects">Projects</a>
+        <HeaderLink href={`/${lang || ""}`}>{t("nav.home")}</HeaderLink>
       </li>
       <li>
-        <a href="#experience">Experience</a>
-      </li>
-      <li>
-        <a href="#education">Education</a>
+        <HeaderLink href={`/${lang || ""}/blog`}>{t("nav.blog")}</HeaderLink>
       </li>
     </ul>
 
@@ -40,6 +48,36 @@ import LinkedInIcon from "./LinkedInIcon.astro";
           <LinkedInIcon aria-hidden="true" width="32" height="32" />
           <span id="linkedin-profile" hidden>My LinkedIn: adonyssantos</span>
         </a>
+      </li>
+      <li>
+        <a
+          href={`/${lang || ""}/rss.xml`}
+          target="_blank"
+          rel="noopener"
+          aria-labelledby="rss-feed"
+        >
+          <RssIcon aria-hidden="true" width="32" height="32" />
+          <span id="linkedin-profile" hidden
+            >My blog RSS Feed on {LANGUAGES[lang]}</span
+          >
+        </a>
+      </li>
+      <li>
+        <span aria-hidden="true">|</span>
+      </li>
+
+      <li>
+        <details class="dropdown">
+          <summary>
+            {lang}
+            <!-- TODO: The following will rendered on 425 or more screen sizes  -->
+            <!-- 🌐 {LANGUAGES[lang]} -->
+          </summary>
+          <ul dir="rtl">
+            <li><LangLink language="en" isActive={lang == "en"} /></li>
+            <li><LangLink language="es" isActive={lang == "es"} /></li>
+          </ul>
+        </details>
       </li>
       {
         BETA_FEATURES.search && (

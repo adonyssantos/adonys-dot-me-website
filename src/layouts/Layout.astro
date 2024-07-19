@@ -1,27 +1,30 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-interface Props {
-  title: string;
-}
+import { useTranslations, type LanguageKey } from "../i18n/utils";
 
-const { title } = Astro.props;
+type Props = {
+  title: string;
+  description: string;
+  lang: LanguageKey;
+};
+
+const { title, description, lang } = Astro.props;
+
+const t = useTranslations(lang as LanguageKey);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <link rel="stylesheet" href="css/pico.min.css" />
+    <BaseHead lang={lang} title={title} description={description} />
   </head>
-  <body class="container">
-    <Header />
-    <slot />
+  <body class="container-fluid">
+    <Header lang={lang} />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
