@@ -5,6 +5,7 @@ import Projects from "../sections/Projects.astro";
 import Experience from "../sections/Experience.astro";
 import Education from "../sections/Education.astro";
 import { type LanguageKey, useTranslations } from "../i18n/utils";
+import LatestPosts from "../sections/LatestPosts.astro";
 
 type Props = {
     lang: LanguageKey;
@@ -17,6 +18,7 @@ const t = useTranslations(lang);
 <h1 hidden aria-hidden="true">{t("site.title")}</h1>
 <AboutMe lang={lang} />
 <Statistics lang={lang} />
+<LatestPosts lang={lang} />
 <Projects lang={lang} />
 <Experience lang={lang} />
 <Education lang={lang} />
