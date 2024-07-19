@@ -13,6 +13,13 @@
     margin-inline: auto;
 }
 
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--pico-background-color);
+}
+
 article {
     background-color: hsla(221, 25%, 85%, 0.15)
 }
