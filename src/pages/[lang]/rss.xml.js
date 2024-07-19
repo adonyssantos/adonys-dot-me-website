@@ -16,7 +16,7 @@ export async function GET(context) {
 		?.filter((blog) => {
 			return blog?.data?.lang === lang;
 		})
-		.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 	return rss({
 		title: ui[lang]['site.title'],
 		description: ui[lang]['site.description'],
