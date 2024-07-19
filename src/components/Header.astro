@@ -68,10 +68,8 @@ const t = useTranslations(lang);
 
       <li>
         <details class="dropdown">
-          <summary>
+          <summary data-language-picker={lang}>
             {lang}
-            <!-- TODO: The following will rendered on 425 or more screen sizes  -->
-            <!-- 🌐 {LANGUAGES[lang]} -->
           </summary>
           <ul dir="rtl">
             <li><LangLink language="en" isActive={lang == "en"} /></li>
@@ -116,3 +114,30 @@ const t = useTranslations(lang);
     )
   }
 </header>
+
+<style>
+  @media screen and (min-width: 425px) {
+    [data-language-picker] {
+      min-width: 135px;
+    }
+  }
+</style>
+
+<script>
+  import { LANGUAGES } from "../i18n/utils";
+
+  function handleResize() {
+    const $languagePicker = document.querySelector("[data-language-picker]");
+    const currentLanguage = $languagePicker.getAttribute(
+      "data-language-picker",
+    );
+
+    $languagePicker.textContent =
+      window.innerWidth < 425
+        ? currentLanguage
+        : `🌐 ${LANGUAGES[currentLanguage]}`;
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+</script>
