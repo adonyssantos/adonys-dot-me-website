@@ -27,6 +27,8 @@ export const ui = {
     "section.experience.description": "Here are some of the companies I have worked for.",
     "section.education.title": "Education",
     "section.education.description": "Here are some of my studies.",
+    "blog.title": "Blog",
+    "blog.description": "Welcome to my blog! Here I share my thoughts, ideas, and experiences.",
   },
   es: {
     "site.title": "Adonys Santos",
@@ -56,5 +58,7 @@ export const ui = {
     "section.experience.description": "Estas son algunas de las empresas para las que he trabajado.",
     "section.education.title": "Educación",
     "section.education.description": "Estos son algunos de los lugares donde he estudiado.",
+    "blog.title": "Blog",
+    "blog.description": "¡Bienvenido a mi blog! Aquí comparto mis pensamientos, ideas y experiencias.",
   },
 } as const;

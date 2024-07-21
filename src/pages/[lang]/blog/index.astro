@@ -2,7 +2,7 @@
 import { getBlogPosts } from "../../../content/config";
 import FormattedDate from "../../../components/FormattedDate.astro";
 import Layout from "../../../layouts/Layout.astro";
-import { LANGUAGES_KEYS } from "../../../i18n/utils";
+import { LANGUAGES_KEYS, useTranslations } from "../../../i18n/utils";
 
 const { lang } = Astro.params;
 
@@ -17,12 +17,13 @@ export async function getStaticPaths() {
     return { params: { lang } };
   });
 }
+const t = useTranslations(lang);
 ---
 
 <Layout title="Blog" description="Blog" lang={lang}>
   <hgroup>
-    <h2>Blog</h2>
-    <p>Read the latest posts from my blog</p>
+    <h2>{t("blog.title")}</h2>
+    <p>{t("blog.description")}</p>
   </hgroup>
   <section>
     {
