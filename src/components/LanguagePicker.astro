@@ -18,7 +18,10 @@ const { currentLang } = Astro.props;
         {
             Object.entries(LANGUAGES).map(([key, _value]) => (
                 <li>
-                    <LangLink language={key} isActive={currentLang == key} />
+                    <LangLink
+                        language={key as LanguageKey}
+                        isActive={currentLang == key}
+                    />
                 </li>
             ))
         }
