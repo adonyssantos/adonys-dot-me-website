@@ -29,6 +29,8 @@ export const ui = {
     "section.education.description": "Here are some of my studies.",
     "blog.title": "Blog",
     "blog.description": "Welcome to my blog! Here I share my thoughts, ideas, and experiences.",
+    "footer.made_with_love": "Made with 💚 by",
+    "footer.deployed_on": "Deployed on",
   },
   es: {
     "site.title": "Adonys Santos",
@@ -60,5 +62,7 @@ export const ui = {
     "section.education.description": "Estos son algunos de los lugares donde he estudiado.",
     "blog.title": "Blog",
     "blog.description": "¡Bienvenido a mi blog! Aquí comparto mis pensamientos, ideas y experiencias.",
+    "footer.made_with_love": "Hecho con 💚 por",
+    "footer.deployed_on": "Desplegado en",
   },
 } as const;

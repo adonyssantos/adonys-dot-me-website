@@ -1,13 +1,22 @@
+---
+import { type LanguageKey, useTranslations } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
 <footer>
   <small>
-    Made with 💚 by <a
+    {t("footer.made_with_love")}
+    <a
       href="https://github.com/adonyssantos/portfolio"
       target="_blank"
       rel="noopener">Adonys Santos</a
-    > • Deployed with <a
-      href="https://vercel.com/"
-      target="_blank"
-      rel="noopener">Vercel</a
-    >
+    > • {t("footer.deployed_on")}
+    <a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>
   </small>
 </footer>
