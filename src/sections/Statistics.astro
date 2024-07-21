@@ -1,24 +1,32 @@
 ---
 import TimeZone from "../components/TimeZone.astro";
 import YearsOfExperience from "../components/YearsOfExperience.astro";
+import { type LanguageKey, useTranslations } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section id="statistics" class="grid">
-  <h2 hidden aria-hidden="true">Statistics</h2>
+  <h2 hidden aria-hidden="true">{t("section.statistics.title")}</h2>
   <article>
-    <h3>Experience</h3>
-    <YearsOfExperience />
+    <h3>{t("section.statistics.years_of_experience")}</h3>
+    <YearsOfExperience text={t("section.statistics.years")} />
   </article>
   <article>
-    <h3>Projects Completed</h3>
+    <h3>{t("section.statistics.completed_projects")}</h3>
     <p>30+</p>
   </article>
   <article>
-    <h3>Happy Clients</h3>
+    <h3>{t("section.statistics.happy_clients")}</h3>
     <p>9+</p>
   </article>
   <article>
-    <h3>Time Zone</h3>
+    <h3>{t("section.statistics.time_zone")}</h3>
     <TimeZone />
   </article>
 </section>

@@ -1,7 +1,18 @@
+---
+import { type LanguageKey, useTranslations } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
 <section id="projects">
   <hgroup>
-    <h2>Projects</h2>
-    <p>Here are some of the projects I have worked on.</p>
+    <h2>{t("section.projects.title")}</h2>
+    <p>{t("section.projects.description")}</p>
   </hgroup>
   <article>
     <h3 hidden aria-hidden="true">🌴 Palm Tree CSS</h3>

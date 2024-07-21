@@ -1,14 +1,21 @@
+---
+import { type LanguageKey, useTranslations } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
 <section id="about-me">
-  <h2 hidden aria-hidden="true">About Me</h2>
-  <p><strong>Hi there 👋</strong></p>
+  <h2 hidden aria-hidden="true">{t("section.about_me.title")}</h2>
+  <p><strong>{t("section.about_me.description")}</strong></p>
   <p>
-    My name is Adonys Santos, a Software Engineer passionate about web and
-    mobile development. I have experience building applications using modern
-    JavaScript, TypeScript, and Python technologies.
+    {t("section.about_me.first_paragraph")}
   </p>
   <p>
-    I am passionate about technology and always seek ways to improve and learn
-    new skills. I enjoy sharing my knowledge and helping others in any way I
-    can. I support cooperation and teamwork to accomplish shared objectives.
+    {t("section.about_me.second_paragraph")}
   </p>
 </section>
