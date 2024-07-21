@@ -42,6 +42,22 @@ const alternateLinks = LANGUAGES_KEYS.map((_lang: LanguageKey) => {
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
+<!-- Font preloads -->
+<link
+	rel="preload"
+	href="/fonts/woff2/FiraCode-Regular.woff2"
+	as="font"
+	type="font/woff2"
+	crossorigin
+/>
+<link
+	rel="preload"
+	href="/fonts/woff2/FiraCode-Bold.woff2"
+	as="font"
+	type="font/woff2"
+	crossorigin
+/>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
