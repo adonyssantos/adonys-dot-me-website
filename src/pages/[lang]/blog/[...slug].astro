@@ -1,0 +1,29 @@
+---
+import { getBlogPosts } from "../../../content/config";
+import { DEFAULT_LANG, type LanguageKey } from "../../../i18n/utils";
+import BlogPost from "../../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+	const pages = await getBlogPosts();
+
+	const paths = pages.map((page) => {
+		return {
+			params: {
+				lang: page?.data.lang || DEFAULT_LANG,
+				slug: page.blog_slug,
+			},
+			props: page,
+		};
+	});
+
+	return paths;
+}
+
+const { lang } = Astro.params;
+const page = Astro.props;
+const { Content } = await page.render();
+---
+
+<BlogPost {...page.data} lang={lang as LanguageKey}>
+	<Content />
+</BlogPost>

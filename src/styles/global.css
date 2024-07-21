@@ -1,0 +1,35 @@
+* {
+    box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --pico-muted-color: #CACBCE;
+    }
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--pico-background-color);
+}
+
+article {
+    background-color: hsla(221, 25%, 85%, 0.15)
+}
+
+section p img {
+    border-radius: 0.25rem;
+}

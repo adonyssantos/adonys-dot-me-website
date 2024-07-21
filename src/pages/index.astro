@@ -1,19 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AboutMe from "../sections/AboutMe.astro";
-import Statistics from "../sections/Statistics.astro";
-import Projects from "../sections/Projects.astro";
-import Experience from "../sections/Experience.astro";
-import Education from "../sections/Education.astro";
+import HomePage from "../components/HomePage.astro";
+import { useTranslations } from "../i18n/utils";
+import { DEFAULT_LANG } from "../i18n/utils";
+
+const t = useTranslations(DEFAULT_LANG);
 ---
 
-<Layout title="Adonys Santos">
-  <main>
-    <h1 hidden aria-hidden="true">Adonys Santos</h1>
-    <AboutMe />
-    <Statistics />
-    <Projects />
-    <Experience />
-    <Education />
-  </main>
+<Layout
+    title={t("site.title")}
+    description={t("site.description")}
+    lang={DEFAULT_LANG}
+>
+    <HomePage lang={DEFAULT_LANG} />
 </Layout>

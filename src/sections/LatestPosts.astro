@@ -1,0 +1,42 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import { getBlogPosts } from "../content/config";
+import { type LanguageKey } from "../i18n/utils";
+
+type Props = { lang: LanguageKey };
+
+const { lang } = Astro.props;
+const posts = (await getBlogPosts())
+    .filter((blog) => blog?.data?.lang === lang)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
+---
+
+<section id="latest-posts">
+    <hgroup>
+        <h2>Latest posts</h2>
+        <p>Read the latest posts from my blog.</p>
+    </hgroup>
+    {
+        posts.map((post) => (
+            <article>
+                <h3 hidden aria-hidden="true">
+                    {post.data.title}
+                </h3>
+                <hgroup>
+                    <strong>{post.data.title}</strong> •{" "}
+                    <em>
+                        <FormattedDate lang={lang} date={post.data.pubDate} />
+                    </em>
+                    <p>{post.data.description}</p>
+                </hgroup>
+                <p>
+                    <a href={`/${lang || ""}/blog/${post.blog_slug}`}>
+                        Read more
+                    </a>
+                </p>
+            </article>
+        ))
+    }
+    <a href={`/${lang || ""}/blog`}>View all posts</a>
+</section>

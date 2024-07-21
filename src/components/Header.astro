@@ -1,20 +1,28 @@
 ---
+import HeaderLink from "./HeaderLink.astro";
+import LangLink from "./LangLink.astro";
 import { BETA_FEATURES } from "../utilities/consts";
 import GitHubIcon from "./GitHubIcon.astro";
 import LinkedInIcon from "./LinkedInIcon.astro";
+import RssIcon from "./RssIcon.astro";
+import { LANGUAGES, useTranslations, type LanguageKey } from "../i18n/utils";
+
+type Props = {
+  lang: LanguageKey;
+};
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
-<header>
+<header class="sticky">
   <nav>
     <ul>
       <li>
-        <a href="#projects">Projects</a>
+        <HeaderLink href={`/${lang || ""}`}>{t("nav.home")}</HeaderLink>
       </li>
       <li>
-        <a href="#experience">Experience</a>
-      </li>
-      <li>
-        <a href="#education">Education</a>
+        <HeaderLink href={`/${lang || ""}/blog`}>{t("nav.blog")}</HeaderLink>
       </li>
     </ul>
 
@@ -40,6 +48,31 @@ import LinkedInIcon from "./LinkedInIcon.astro";
           <LinkedInIcon aria-hidden="true" width="32" height="32" />
           <span id="linkedin-profile" hidden>My LinkedIn: adonyssantos</span>
         </a>
+      </li>
+      <li>
+        <a
+          href={`/${lang || ""}/rss.xml`}
+          target="_blank"
+          aria-labelledby="rss-feed"
+        >
+          <RssIcon aria-hidden="true" width="32" height="32" />
+          <span id="rss-feed" hidden>My blog RSS Feed on {LANGUAGES[lang]}</span
+          >
+        </a>
+      </li>
+      <li>
+        <span aria-hidden="true">|</span>
+      </li>
+      <li>
+        <details class="dropdown">
+          <summary data-language-picker={lang}>
+            {lang}
+          </summary>
+          <ul dir="rtl">
+            <li><LangLink language="en" isActive={lang == "en"} /></li>
+            <li><LangLink language="es" isActive={lang == "es"} /></li>
+          </ul>
+        </details>
       </li>
       {
         BETA_FEATURES.search && (
@@ -78,3 +111,33 @@ import LinkedInIcon from "./LinkedInIcon.astro";
     )
   }
 </header>
+
+<style>
+  @media screen and (min-width: 425px) {
+    [data-language-picker] {
+      min-width: 135px;
+    }
+  }
+</style>
+
+<script>
+  import { DEFAULT_LANG, type LanguageKey, LANGUAGES } from "../i18n/utils";
+
+  function handleResize() {
+    const $languagePicker = document.querySelector("[data-language-picker]");
+
+    if (!$languagePicker) return;
+
+    const currentLanguage =
+      ($languagePicker.getAttribute("data-language-picker") as LanguageKey) ||
+      DEFAULT_LANG;
+
+    $languagePicker.textContent =
+      window.innerWidth < 425
+        ? currentLanguage
+        : `🌐 ${LANGUAGES[currentLanguage]}`;
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+</script>

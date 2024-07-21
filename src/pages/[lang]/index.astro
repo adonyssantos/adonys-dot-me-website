@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import {
+  getLangFromUrl,
+  LANGUAGES_KEYS,
+  useTranslations,
+} from "../../i18n/utils";
+import HomePage from "../../components/HomePage.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  return LANGUAGES_KEYS.map((lang) => {
+    return { params: { lang } };
+  });
+}
+---
+
+<Layout title={t("site.title")} description={t("site.description")} lang={lang}>
+  <HomePage lang={lang} />
+</Layout>

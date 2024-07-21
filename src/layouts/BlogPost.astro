@@ -1,0 +1,37 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import { BETA_FEATURES } from "../utilities/consts";
+import type { CollectionEntry } from "astro:content";
+import Layout from "./Layout.astro";
+import type { LanguageKey } from "../i18n/utils";
+
+type Props = CollectionEntry<"blog">["data"] & { lang: LanguageKey };
+
+const { title, description, heroImage, author, pubDate, lang } = Astro.props;
+---
+
+<Layout title={title} description={description} lang={lang}>
+  <section>
+    <header>
+      {
+        BETA_FEATURES.blogPostHeroImage && heroImage && (
+          <img width={1020} height={510} src={heroImage} alt={title} />
+        )
+      }
+      <hgroup>
+        <h1>{title}</h1>
+        <p class="date">
+          by {author} • <FormattedDate lang={lang} date={pubDate} />
+        </p>
+      </hgroup>
+    </header>
+    <slot />
+  </section>
+</Layout>
+
+<style>
+  section img,
+  section p {
+    margin-bottom: 2rem;
+  }
+</style>

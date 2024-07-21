@@ -1,0 +1,94 @@
+---
+import { getBlogPosts } from "../../../content/config";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { LANGUAGES_KEYS } from "../../../i18n/utils";
+
+const { lang } = Astro.params;
+
+const posts = (await getBlogPosts())
+  ?.filter((blog) => {
+    return blog?.data?.lang === lang;
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+export async function getStaticPaths() {
+  return LANGUAGES_KEYS.map((lang) => {
+    return { params: { lang } };
+  });
+}
+---
+
+<Layout title="Blog" description="Blog" lang={lang}>
+  <hgroup>
+    <h2>Blog</h2>
+    <p>Read the latest posts from my blog</p>
+  </hgroup>
+  <section>
+    {
+      posts.map((post) => (
+        <article>
+          <a href={`/${lang}/blog/${post.blog_slug}`}>
+            <img
+              width={720}
+              height={360}
+              src={post.data.heroImage}
+              alt={post.body}
+            />
+            <footer>
+              <h4 class="title">{post.data.title}</h4>
+              <p class="date">
+                <FormattedDate lang={lang} date={post.data.pubDate} />
+              </p>
+            </footer>
+          </a>
+        </article>
+      ))
+    }
+  </section>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  section article {
+    width: calc(33% - 1.5rem);
+    padding: 0;
+    border-radius: 0.25rem;
+  }
+  section article * {
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  section article:hover {
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+  }
+  section article img {
+    width: 100%;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  section article footer {
+    padding-inline: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    section {
+      gap: 0.5rem;
+    }
+    section article {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
