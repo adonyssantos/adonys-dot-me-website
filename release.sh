@@ -31,10 +31,9 @@ echo "Do you want to push the changes to the remote repository (origin) for bran
 read answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ;then
-  git push sandbox $current_branch
-  git push sandbox "v$NEW_VERSION"
+  git push origin $current_branch
+  git push origin "v$NEW_VERSION"
 else
   echo "You chose not to push the changes to the remote repository"
   exit 0
 fi
-
