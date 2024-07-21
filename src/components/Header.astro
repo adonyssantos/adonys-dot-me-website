@@ -5,7 +5,7 @@ import { BETA_FEATURES } from "../utilities/consts";
 import GitHubIcon from "./GitHubIcon.astro";
 import LinkedInIcon from "./LinkedInIcon.astro";
 import RssIcon from "./RssIcon.astro";
-import { LANGUAGES, useTranslations, type LanguageKey } from "../i18n/utils";
+import { useTranslations, type LanguageKey } from "../i18n/utils";
 
 type Props = {
   lang: LanguageKey;
@@ -35,7 +35,7 @@ const t = useTranslations(lang);
           aria-labelledby="github-profile"
         >
           <GitHubIcon aria-hidden="true" width="32" height="32" />
-          <span id="github-profile" hidden>My GitHub: adonyssantos</span>
+          <span id="github-profile" hidden>{t("nav.social.github")}</span>
         </a>
       </li>
       <li>
@@ -46,7 +46,7 @@ const t = useTranslations(lang);
           aria-labelledby="linkedin-profile"
         >
           <LinkedInIcon aria-hidden="true" width="32" height="32" />
-          <span id="linkedin-profile" hidden>My LinkedIn: adonyssantos</span>
+          <span id="linkedin-profile" hidden>{t("nav.social.linkedin")}</span>
         </a>
       </li>
       <li>
@@ -56,8 +56,7 @@ const t = useTranslations(lang);
           aria-labelledby="rss-feed"
         >
           <RssIcon aria-hidden="true" width="32" height="32" />
-          <span id="rss-feed" hidden>My blog RSS Feed on {LANGUAGES[lang]}</span
-          >
+          <span id="rss-feed" hidden>{t("nav.social.rss")}</span>
         </a>
       </li>
       <li>
