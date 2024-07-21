@@ -1,0 +1,46 @@
+---
+import LangLink from "./LangLink.astro";
+import { LANGUAGES, type LanguageKey } from "../i18n/utils";
+
+type Props = {
+    currentLang: LanguageKey;
+};
+
+const { currentLang } = Astro.props;
+---
+
+<details class="dropdown">
+    <summary>
+        <span class="mobile">{currentLang}</span>
+        <span class="desktop">🌐 {LANGUAGES[currentLang]}</span>
+    </summary>
+    <ul dir="rtl">
+        {
+            Object.entries(LANGUAGES).map(([key, _value]) => (
+                <li>
+                    <LangLink language={key} isActive={currentLang == key} />
+                </li>
+            ))
+        }
+    </ul>
+</details>
+
+<style>
+    .mobile {
+        display: inline;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    @media screen and (min-width: 501px) {
+        .mobile {
+            display: none;
+        }
+
+        .desktop {
+            display: inline;
+        }
+    }
+</style>
