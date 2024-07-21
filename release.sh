@@ -25,4 +25,16 @@ echo "The package.json files has been updated and committed"
 git tag -a "v$NEW_VERSION" -m "Release $NEW_VERSION"
 echo "A new tag v$NEW_VERSION has been created"
 
-echo "The release is ready to be pushed to the remote repository"
+# Ask the user if he wants to push the changes to the remote repository currently origin
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+echo "Do you want to push the changes to the remote repository (origin) for branch $current_branch? (y/n)"
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+  git push sandbox $current_branch
+  git push sandbox "v$NEW_VERSION"
+else
+  echo "You chose not to push the changes to the remote repository"
+  exit 0
+fi
+
