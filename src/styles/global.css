@@ -1,3 +1,7 @@
+:root {
+    --pico-font-family: "Fira Code", monospace;
+}
+
 * {
     box-shadow: none !important;
 }
