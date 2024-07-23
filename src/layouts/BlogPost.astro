@@ -21,7 +21,7 @@ const { title, description, heroImage, author, pubDate, lang } = Astro.props;
       <hgroup>
         <h1>{title}</h1>
         <p class="date">
-          by {author} • <FormattedDate lang={lang} date={pubDate} />
+          {author} • <FormattedDate lang={lang} date={pubDate} />
         </p>
       </hgroup>
     </header>
