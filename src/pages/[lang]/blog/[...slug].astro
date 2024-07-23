@@ -27,3 +27,12 @@ const { Content } = await page.render();
 <BlogPost {...page.data} lang={lang as LanguageKey}>
 	<Content />
 </BlogPost>
+
+<!-- The following script select all the external <a> tags and the targe"_blank" attribute to open the links in a new tab -->
+<script>
+	document.querySelectorAll("a").forEach(($anchor) => {
+		if ($anchor.hostname !== window.location.hostname) {
+			$anchor.setAttribute("target", "_blank");
+		}
+	});
+</script>
