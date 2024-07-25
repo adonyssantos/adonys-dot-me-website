@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { type LanguageKey } from "../i18n/utils";
+import { useTranslations, type LanguageKey } from "../i18n/utils";
 
 type Props = {
   title: string;
@@ -11,12 +11,17 @@ type Props = {
 };
 
 const { title, description, lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
-    <BaseHead lang={lang} title={title} description={description} />
+    <BaseHead
+      lang={lang}
+      title={title ? `${title} | ${t("site.title")}` : t("site.title")}
+      description={description}
+    />
   </head>
   <body class="container-fluid">
     <Header lang={lang} />
@@ -24,5 +29,16 @@ const { title, description, lang } = Astro.props;
       <slot />
     </main>
     <Footer lang={lang} />
+    <script>
+      const $favicon = document.querySelector(
+        'link[rel="icon"]',
+      ) as HTMLLinkElement;
+
+      document.addEventListener("visibilitychange", () => {
+        $favicon.href = document.hidden
+          ? "/images/favicons/favicon-2.png"
+          : "/images/favicons/favicon-1.png";
+      });
+    </script>
   </body>
 </html>

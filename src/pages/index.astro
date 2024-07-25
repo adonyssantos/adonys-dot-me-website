@@ -7,10 +7,6 @@ import { DEFAULT_LANG } from "../i18n/utils";
 const t = useTranslations(DEFAULT_LANG);
 ---
 
-<Layout
-    title={t("site.title")}
-    description={t("site.description")}
-    lang={DEFAULT_LANG}
->
+<Layout description={t("site.description")} lang={DEFAULT_LANG}>
     <HomePage lang={DEFAULT_LANG} />
 </Layout>
