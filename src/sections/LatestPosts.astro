@@ -37,7 +37,9 @@ const t = useTranslations(lang);
                         aria-labelledby={post.id}
                     >
                         {t("section.latest_posts.read_more")}
-                        <span id={post.id}>{post.data.title}</span>
+                        <span hidden id={post.id}>
+                            {post.data.title}
+                        </span>
                     </a>
                 </p>
             </article>
