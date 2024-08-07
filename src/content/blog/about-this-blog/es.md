@@ -16,7 +16,6 @@ Esta es mi primera entrada de muchas que pienso crear en este blog. En este blog
   - [Mejorar mi escritura](#mejorar-mi-escritura)
   - [Mejorar mi inglés](#mejorar-mi-inglés)
   - [Compartir lo que hago](#compartir-lo-que-hago)
-- [Conclusión](#conclusión)
 
 ## Versión 1.1.0 de mi sitio web
 
@@ -26,7 +25,7 @@ Todo esto del blog fue hecho en un fin de semana, comenzando un viernes donde no
 
 Este sitio es de [código abierto](https://github.com/adonyssantos/adonys-dot-me-website) y está construido completamente con Astro y PicoCSS, que se convierten en HTML, CSS, y algo de JavaScript (aunque el sitio funciona perfectamente sin JavaScript). PicoCSS es una biblioteca que no usa clases y simplifica el diseño, donde solo necesitas escribir HTML semántico y accesible, y PicoCSS se encarga del resto. En el futuro, planeo migrar de PicoCSS a [Palm Tree CSS](https://github.com/adonyssantos/palm-tree-css), una biblioteca que estoy desarrollando junto con la comunidad Gentleman Programming.
 
-Todo el contenido de este sitio es estático, y las entradas están escritas en formato Markdown, que luego se convierte en HTML con Astro. 
+Todo el contenido de este sitio es estático, y las entradas están escritas en formato Markdown, que luego se convierte en HTML con Astro.
 
 Utilicé una plantilla de código abierto de Astro diseñado para blogs con internacionalización, el cual modifiqué para que se ajuste a mis necesidades. La plantilla original se llama [astro-blog-i18n-starter](https://github.com/rebecamurillo/astro-blog-i18n-starter), fue creado por Rebeca Murillo. De hecho, he contribuido al proyecto dejando tres pull requests con mejoras.
 
@@ -34,7 +33,7 @@ Gran parte del tiempo de desarrollo del blog la dediqué a mejorar la accesibili
 
 ## Motivación
 
-Me gusta crear cosas y solucionar problemas mediante software, a menudo suelo comenzar proyectos que terminan olvidando en una carpeta en mi computadora. Con este blog tengo la intención de compartir lo que voy haciendo, de modo que quede en Internet e incluso le podría ser útil a alguien más. 
+Me gusta crear cosas y solucionar problemas mediante software, a menudo suelo comenzar proyectos que terminan olvidando en una carpeta en mi computadora. Con este blog tengo la intención de compartir lo que voy haciendo, de modo que quede en Internet e incluso le podría ser útil a alguien más.
 
 **Mi objetivo con todo esto es:**
 
@@ -49,7 +48,6 @@ Uno de los objetivos de este blog es mejorar mi escritura. Para lograrlo, leo li
 ### Mejorar mi inglés
 
 Otro objetivo que quiero lograr antes de que termine este año 2024, es mejorar mi nivel de inglés, sin duda alguna es algo que he logrado, pero me falta mucho por mejorar. He estado tomando clases en vivo con profesores nativos, practicando con varios recursos digitales, participando en conversaciones por dos servidores de Discord y ahora con este blog. A veces, cuando quiera fluir, escribiré las entradas en español y luego las traduciré al inglés y otras veces, las escribiré en inglés y luego la traduciré al español.
-
 
 <mark>Recuerda que puedes leer este blog tanto en español como en inglés. Arriba a la derecha tienes el selector para cambiar de idioma.</mark>
 

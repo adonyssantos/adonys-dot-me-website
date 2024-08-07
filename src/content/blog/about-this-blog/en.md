@@ -9,7 +9,6 @@ lang: 'en'
 
 This is my first post of many that I plan to publish on this blog. I will publish everything that interests me, although my focus will be on technology, and software engineering. In fact, in the last month I have been very hooked on everything related to networks, servers, and automations (I am creating my own home lab and eventually a home server), and I have the intention of publishing some articles about this.
 
-
 ## Table of contents
 
 - [Version 1.1.0 of my website](#version-110-of-my-website)
@@ -17,7 +16,6 @@ This is my first post of many that I plan to publish on this blog. I will publis
   - [Improve my writing](#improve-my-writing)
   - [Improve my English](#improve-my-english)
   - [Share what I do](#share-what-i-do)
-- [Conclusion](#conclusion)
 
 ## Version 1.1.0 of my website
 
@@ -36,7 +34,6 @@ Most of the time developing the blog was spent on improving accessibility, SEO, 
 ## Motivation
 
 I like to create things and solve problems through software, many of my personal projects end up forgotten on my computer. With this blog, I have the intention of sharing what I am doing, so that it remain on the Internet and waiting and hoping that it can be helpful to someone else.
-
 
 **My goal with all this is:**
 
@@ -60,5 +57,4 @@ I like to share my knowledge with other people, I often help members of the Gent
 
 ---
 
-Finally, this blog has its own RSS Feed available in both Spanish and English. If you like my content and want to stay up to day with my publications, do not hesitate to add it to your RSS reader! 
-
+Finally, this blog has its own RSS Feed available in both Spanish and English. If you like my content and want to stay up to day with my publications, do not hesitate to add it to your RSS reader!
