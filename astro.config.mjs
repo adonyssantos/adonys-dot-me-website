@@ -13,5 +13,13 @@ export default defineConfig({
       }
     }
   },
-  integrations: [mdx(), sitemap(), playformCompress()]
+  integrations: [mdx(), sitemap({
+    i18n: {
+      defaultLocale: 'en',
+      locales: {
+        en: "en-US",
+        es: "es-ES",
+      }
+    }
+  }), playformCompress()]
 });

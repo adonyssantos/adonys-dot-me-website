@@ -16,14 +16,19 @@ type Props = {
 	title: string;
 	description: string;
 	image?: string;
-	lang: string;
+	lang: LanguageKey;
 };
 
 const canonicalPathname = pathNameIsInLanguage(Astro.url.pathname, DEFAULT_LANG)
 	? Astro.url.pathname
 	: getLocalizedPathname(Astro.url.pathname, DEFAULT_LANG);
 const canonicalURL = new URL(canonicalPathname, Astro.site);
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const {
+	title,
+	lang,
+	description,
+	image = "/blog-placeholder-1.jpg",
+} = Astro.props;
 const alternateLinks = LANGUAGES_KEYS.map((_lang: LanguageKey) => {
 	return {
 		href: new URL(
@@ -41,6 +46,12 @@ const alternateLinks = LANGUAGES_KEYS.map((_lang: LanguageKey) => {
 <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon-1.png" />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<link
+	rel="alternate"
+	href={`/${lang}/rss.xml`}
+	type="application/rss+xml"
+	title="RSS"
+/>
 
 <!-- Font preloads -->
 <link
