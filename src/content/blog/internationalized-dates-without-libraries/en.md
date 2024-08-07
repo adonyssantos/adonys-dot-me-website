@@ -9,7 +9,7 @@ lang: 'en'
 
 It is very common to work rendering dates in different languages, and there are many libraries to do this, but in my blog I implemented a simple internationalized date without libraries, using a JavaScript method called `toLocaleDateString` that is available in all modern browsers.
 
-![Can I Use screenshot with 96.65% of global support](./assets/caniuse-toLocaleDateString.png)
+![Can I Use screenshot with 96.65% of global support](/images/blog/caniuse-toLocaleDateString.png)
 
 The amazing thing about that, is that you can use it on any framework or library. For example, in my blog, I am using Astro and the code looks like this:
 
@@ -41,7 +41,7 @@ Also, It is recommended to use semantic HTML, so in this case, I am using the `t
 
 **And voilà! We have an internationalized date without libraries:**
 
-![Internationalized dates without libraries](./assets/formatted-dates.png)
+![Internationalized dates without libraries](/images/blog/formatted-dates.png)
 
 The same logic can be implemented in any framework or library.
 

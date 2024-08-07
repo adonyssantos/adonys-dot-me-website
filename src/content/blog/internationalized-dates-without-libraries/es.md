@@ -10,7 +10,7 @@ lang: 'es'
 
 Es muy común renderizar fechar en diferentes idiomas y hay muchas bibliotecas para esto, pero en mi blog he implementado fechas internacionalizadas de manera simple y sin bibliotecas, usando un método de JavaScript que se llama `toLocaleDateString` y está disponible en todos los navegadores modernos.
 
-![Captura de Can I con 96.65% de soporte global](./assets/caniuse-toLocaleDateString.png)
+![Captura de Can I con 96.65% de soporte global](/images/blog/caniuse-toLocaleDateString.png)
 
 Lo bueno de esto es que puedes usarlo en cualquier framework o biblioteca. Por ejemplo, en mi blog, estoy usando Astro y el código se ve así:
 
@@ -42,7 +42,7 @@ Además, es recomendable utilizar HTML semántico, en este caso estoy usando la 
 
 **¡Y listo! Tenemos fechas internacionalizadas sin bibliotecas:**
 
-![Fecha internacionalizadas sin bibliotecas](./assets/formatted-dates.png)
+![Fecha internacionalizadas sin bibliotecas](/images/blog/formatted-dates.png)
 
 La misma lógica puede ser implementada en cualquier framework o biblioteca.
 
