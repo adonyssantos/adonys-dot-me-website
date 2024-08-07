@@ -1,40 +1,21 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
+<p align="center">
+ <img src="./public/images/favicons/favicon-1.png" alt="adonys.me favicon" width="200"/>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+<p align="center">
+ 🚀 My website and blog
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<p align="center">
+  <img src="https://img.shields.io/github/v/tag/adonyssantos/adonys-dot-me-website?color=blue&label=version&style=plastic" alt="GitHub tag (latest SemVer)">
+ <img src="https://img.shields.io/github/repo-size/adonyssantos/adonys-dot-me-website?style=plastic" alt="GitHub Repo Size" title="GitHub Repo Size">
+ <img src="https://img.shields.io/github/languages/count/adonyssantos/adonys-dot-me-website?style=plastic" alt="GitHub Language count" title="GitHub Language count">
+ <img src="https://img.shields.io/github/languages/top/adonyssantos/adonys-dot-me-website?style=plastic" alt="GitHub Top Language" title="GitHub Top Language">
+ <img src="https://img.shields.io/github/last-commit/adonyssantos/adonys-dot-me-website?color=red&amp;style=plastic" alt="GitHub Last Commit" title="GitHub Last Commit">
+</p>
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+This is my personal website and blog, built with [Astro](https://astro.build/). It's a static site, with a blog section that is generated from markdown files.
 
 ## 🧞 Commands
 
@@ -49,6 +30,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Credits
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This Astro was built using the [Astro Blog i18n Starter](https://github.com/rebecamurillo/astro-blog-i18n-starter) template for the internationalization setup and then I customized the styles and added some features.
