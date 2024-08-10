@@ -16,7 +16,12 @@ const isActive = language === lang;
 const href = getLocalizedPathname(pathname, language);
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a
+  href={href}
+  data-astro-prefetch="viewport"
+  class:list={[className, { active: isActive }]}
+  {...props}
+>
   {LANGUAGES[language]}
 </a>
 

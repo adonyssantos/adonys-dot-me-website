@@ -21,5 +21,6 @@ export default defineConfig({
         es: "es-ES",
       }
     }
-  }), playformCompress()]
+  }), playformCompress()],
+  prefetch: true
 });

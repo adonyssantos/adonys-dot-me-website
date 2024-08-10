@@ -29,7 +29,10 @@ const t = useTranslations(lang);
     {
       posts.map((post) => (
         <article>
-          <a href={`/${lang}/blog/${post.blog_slug}`}>
+          <a
+            href={`/${lang}/blog/${post.blog_slug}`}
+            data-astro-prefetch="viewport"
+          >
             <img
               width={720}
               height={360}
