@@ -35,12 +35,9 @@ const t = useTranslations(lang);
                     <a
                         href={`/${lang || ""}/blog/${post.blog_slug}`}
                         data-astro-prefetch="viewport"
-                        aria-labelledby={post.id}
+                        area-label={`${t("section.latest_posts.read_more")} ${post.data.title}`}
                     >
                         {t("section.latest_posts.read_more")}
-                        <span hidden id={post.id}>
-                            {post.data.title}
-                        </span>
                     </a>
                 </p>
             </article>
