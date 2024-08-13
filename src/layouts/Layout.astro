@@ -34,10 +34,17 @@ const t = useTranslations(lang);
         'link[rel="icon"]',
       ) as HTMLLinkElement;
 
+      function getMainFavicon() {
+        const isDarkMode = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        return `/images/favicons/favicon-1${isDarkMode ? "--dark" : ""}.png`;
+      }
+
       document.addEventListener("visibilitychange", () => {
         $favicon.href = document.hidden
           ? "/images/favicons/favicon-2.png"
-          : "/images/favicons/favicon-1.png";
+          : getMainFavicon();
       });
     </script>
   </body>
