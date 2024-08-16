@@ -10,7 +10,7 @@ type Props = CollectionEntry<"blog">["data"] & { lang: LanguageKey };
 const { title, description, heroImage, author, pubDate, lang } = Astro.props;
 ---
 
-<Layout title={title} description={description} lang={lang}>
+<Layout title={title} description={description} lang={lang} image={heroImage}>
   <section>
     <header>
       {

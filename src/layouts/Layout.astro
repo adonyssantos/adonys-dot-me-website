@@ -8,9 +8,10 @@ type Props = {
   title?: string;
   description: string;
   lang: LanguageKey;
+  image?: string;
 };
 
-const { title, description, lang } = Astro.props;
+const { title, description, lang, image } = Astro.props;
 const t = useTranslations(lang);
 ---
 
@@ -21,6 +22,7 @@ const t = useTranslations(lang);
       lang={lang}
       title={title ? `${title} | ${t("site.title")}` : t("site.title")}
       description={description}
+      image={image}
     />
   </head>
   <body class="container-fluid">
