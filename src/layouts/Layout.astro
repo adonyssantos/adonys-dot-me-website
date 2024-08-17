@@ -32,22 +32,26 @@ const t = useTranslations(lang);
     </main>
     <Footer lang={lang} />
     <script>
-      const $favicon = document.querySelector(
-        'link[rel="icon"]',
-      ) as HTMLLinkElement;
+      import { BETA_FEATURES } from "../utilities/consts";
 
-      function getMainFavicon() {
-        const isDarkMode = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        return `/images/favicons/favicon-1${isDarkMode ? "--dark" : ""}.png`;
+      if (BETA_FEATURES.dynamicFavicon) {
+        const $favicon = document.querySelector(
+          'link[rel="icon"]',
+        ) as HTMLLinkElement;
+
+        function getMainFavicon() {
+          const isDarkMode = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          return `/images/favicons/favicon-1${isDarkMode ? "--dark" : ""}.png`;
+        }
+
+        document.addEventListener("visibilitychange", () => {
+          $favicon.href = document.hidden
+            ? "/images/favicons/favicon-2.png"
+            : getMainFavicon();
+        });
       }
-
-      document.addEventListener("visibilitychange", () => {
-        $favicon.href = document.hidden
-          ? "/images/favicons/favicon-2.png"
-          : getMainFavicon();
-      });
     </script>
   </body>
 </html>
