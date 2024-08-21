@@ -1,8 +1,8 @@
 ---
 title: 'Fechas internacionalizadas sin bibliotecas'
-description: "It is very common to work rendering dates in different languages, and there are many libraries to do this, but in my blog I implemented a simple internationalized date without libraries, using a JavaScript method that is available in all modern browsers."
-description-es: "Es muy común renderizar fechar en diferentes idiomas y hay muchas bibliotecas para esto, pero en mi blog he implementado fechas internacionalizadas de manera simple y sin bibliotecas, usando un método de JavaScript que está disponible en todos los navegadores modernos."
+description: "Es muy común renderizar fechar en diferentes idiomas y hay muchas bibliotecas para esto, pero en mi blog he implementado fechas internacionalizadas de manera simple y sin bibliotecas, usando un método de JavaScript que está disponible en todos los navegadores modernos."
 pubDate: 'Aug 7 2024'
+updatedDate: '2024-08-21'
 heroImage: '/images/blog/hero/internationalized-dates-without-libraries.jpg'
 author: 'Adonys'
 lang: 'es'
