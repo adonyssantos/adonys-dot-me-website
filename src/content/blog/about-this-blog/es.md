@@ -1,13 +1,14 @@
 ---
-title: 'Sobre este blog'
-description: 'Te cuento cómo creé este blog en un fin de semana, los motivos detrás de su creación y lo que planeo publicar.'
-pubDate: 'Jul 22 2024'
-heroImage: '/images/blog/hero/about-this-blog.jpg'
-author: 'Adonys'
-lang: 'es'
+title: "Sobre este blog"
+description: "Te cuento cómo creé este blog en un fin de semana, los motivos detrás de su creación y lo que planeo publicar."
+pubDate: "2024-07-22"
+updatedDate: "2024-08-23"
+heroImage: "/images/blog/hero/about-this-blog.jpg"
+author: "Adonys"
+lang: "es"
 ---
 
-Esta es mi primera entrada de muchas que pienso crear en este blog. En este blog publicare de todo lo que me interesa, aunque mi enfoque será la tecnología e ingeniería de software. De hecho, últimamente he estado muy enganchado con todo lo relacionado con redes, servidores y automatizaciones (Estoy creando mi propio laboratorio en casa y para finalmente crear un servidor en casa) y tengo la intención de crear algunas entradas sobre esto.
+Esta es mi primera entrada de muchas que pienso crear en este blog. Publicare de todo lo que me interesa, aunque mi enfoque será la tecnología e ingeniería de software. De hecho, últimamente he estado muy enganchado con todo lo relacionado con redes, servidores y automatizaciones; tengo la intención de crear algunas entradas sobre esto.
 
 ## Tabla de contenido
 
@@ -47,7 +48,7 @@ Uno de los objetivos de este blog es mejorar mi escritura. Para lograrlo, leo li
 
 ### Mejorar mi inglés
 
-Otro objetivo que quiero lograr antes de que termine este año 2024, es mejorar mi nivel de inglés, sin duda alguna es algo que he logrado, pero me falta mucho por mejorar. He estado tomando clases en vivo con profesores nativos, practicando con varios recursos digitales, participando en conversaciones por dos servidores de Discord y ahora con este blog. A veces, cuando quiera fluir, escribiré las entradas en español y luego las traduciré al inglés y otras veces, las escribiré en inglés y luego la traduciré al español.
+Otro objetivo que quiero lograr antes del 2025, es mejorar mi nivel de inglés, sin duda alguna es algo que he logrado, pero me falta mucho por mejorar. He estado tomando clases en vivo con profesores nativos, practicando con varios recursos digitales, participando en conversaciones por dos servidores de Discord y ahora con este blog. A veces, cuando quiera fluir, escribiré las entradas en español y luego las traduciré al inglés y otras veces, las escribiré en inglés y luego la traduciré al español.
 
 <mark>Recuerda que puedes leer este blog tanto en español como en inglés. Arriba a la derecha tienes el selector para cambiar de idioma.</mark>
 
@@ -57,4 +58,4 @@ Me gusta compartir mi conocimiento con otras personas, a menudo suelo ayudar a l
 
 ---
 
-Finalmente, este blog cuenta con su propio RSS Feed disponible tanto en español como en inglés. Si te gusta mi contenido y quieres mantenerte al día con mis publicaciones, ¡no dudes en agregarlo a tu lector de RSS!
+Finalmente, este blog cuenta con su propio [Feed RSS](/es/rss.xml) disponible tanto en español como en inglés. Si te gusta mi contenido y quieres mantenerte al día con mis publicaciones, ¡no dudes en agregarlo a tu lector de RSS!

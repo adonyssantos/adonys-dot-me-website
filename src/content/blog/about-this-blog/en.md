@@ -1,13 +1,14 @@
 ---
-title: 'About this blog'
+title: "About this blog"
 description: "I tell you how I built this blog in a weekend, reasons behind its creation, and what I plan to publish."
-pubDate: 'Jul 22 2024'
-heroImage: '/images/blog/hero/about-this-blog.jpg'
-author: 'Adonys'
-lang: 'en'
+pubDate: "2024-07-22"
+updatedDate: "2024-08-23"
+heroImage: "/images/blog/hero/about-this-blog.jpg"
+author: "Adonys"
+lang: "en"
 ---
 
-This is my first post of many that I plan to publish on this blog. I will publish everything that interests me, although my focus will be on technology, and software engineering. In fact, in the last month I have been very hooked on everything related to networks, servers, and automations (I am creating my own home lab and eventually a home server), and I have the intention of publishing some articles about this.
+This is my first post of many that I plan to publish on this blog. I will publish everything that interests me, although my focus will be on technology, and software engineering. In fact, in the last month I have been very hooked on everything related to networks, servers, and automations; I have the intention of publishing some articles about this.
 
 ## Table of contents
 
@@ -33,7 +34,7 @@ Most of the time developing the blog was spent on improving accessibility, SEO, 
 
 ## Motivation
 
-I like to create things and solve problems through software, many of my personal projects end up forgotten on my computer. With this blog, I have the intention of sharing what I am doing, so that it remain on the Internet and waiting and hoping that it can be helpful to someone else.
+I like to create things and solve problems through software, many of my personal projects end up forgotten on my computer. So, I have the intention of sharing what I am doing, so that it remain on the Internet and waiting and hoping that it can be helpful to someone else.
 
 **My goal with all this is:**
 
@@ -43,11 +44,11 @@ I like to create things and solve problems through software, many of my personal
 
 ### Improve my writing
 
-One of my goals with this blog is to improve my writing skills. To achieve this, I read books frequently to acquire new vocabulary and now with this blog I will write regularly (but sometimes it is irregular), which will help me to improve my writing. I do not plan to use artificial intelligence to write the articles, but I do plan to use to improve my writing. I think that artificial intelligence is a powerful tool if it is used correctly and in the future, I want to publish an article about how I use artificial intelligence to enhance my writing, English and other skills.
+One of my goals is to improve my writing skills. To achieve this, I read books frequently to acquire new vocabulary and now with this blog I will write regularly (but sometimes it is irregular), which will help me to improve my writing. I do not plan to use artificial intelligence to write the articles, but I do plan to use to improve my writing. I think that artificial intelligence is a powerful tool if it is used correctly and in the future, I want to publish an article about how I use artificial intelligence to enhance my writing, English and other skills.
 
 ### Improve my English
 
-Another goal that I want to achieve before 2025, is to improve my English (I am a native Spanish speaker and English is my second language) level, undoubtedly it is something that I have achieved, but I have a lot to improve. I have been taking live classes with native teachers, practicing with various digital resources, participating in talks on two Discord servers, and now with this blog. Sometimes, when I want to flow, I will write the articles in Spanish and then translate them into English and other times, I will write them in English and them translate into Spanish.
+I am a native Spanish speaker and English is my second language. So, another goal that I want to achieve before 2025, is to improve my English level, undoubtedly it is something that I have achieved, but I have a lot to improve. I have been taking live classes with native teachers, practicing with various digital resources, and participating in talks on two Discord servers. Sometimes, when I want to flow, I will write the articles in Spanish and then translate them into English and other times, I will write them in English and them translate into Spanish.
 
 <mark>Remember that you can read this blog in both Spanish and English. At the top right you have the language picker.</mark>
 
@@ -57,4 +58,4 @@ I like to share my knowledge with other people, I often help members of the Gent
 
 ---
 
-Finally, this blog has its own RSS Feed available in both Spanish and English. If you like my content and want to stay up to day with my publications, do not hesitate to add it to your RSS reader!
+Finally, this blog has its own [RSS Feed](/en/rss.xml) available in both Spanish and English. If you like my content and want to stay up to day with my publications, do not hesitate to add it to your RSS reader!
