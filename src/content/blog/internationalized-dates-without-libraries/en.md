@@ -1,10 +1,11 @@
 ---
-title: 'Internationalized dates without libraries'
+title: "Internationalized dates without libraries"
 description: "It is very common to work rendering dates in different languages, and there are many libraries to do this, but in my blog I implemented a simple internationalized date without libraries, using a JavaScript method that is available in all modern browsers."
-pubDate: 'Aug 7 2024'
-heroImage: '/images/blog/hero/internationalized-dates-without-libraries.jpg'
-author: 'Adonys'
-lang: 'en'
+pubDate: "2024-08-07"
+updatedDate: "2024-08-23"
+heroImage: "/images/blog/hero/internationalized-dates-without-libraries.jpg"
+author: "Adonys"
+lang: "en"
 ---
 
 It is very common to work rendering dates in different languages, and there are many libraries to do this, but in my blog I implemented a simple internationalized date without libraries, using a JavaScript method called `toLocaleDateString` that is available in all modern browsers.
