@@ -1,16 +1,9 @@
 ---
-import {
-    START_WORKING_DATE,
-    INACTIVE_WORKING_MONTHS,
-} from "../utilities/consts";
+import { START_WORKING_DATE } from "../utilities/consts";
 import { calculateExperienceYears } from "../utilities/functions";
 
 const { text } = Astro.props;
-
-const experienceYears = calculateExperienceYears(
-    START_WORKING_DATE,
-    INACTIVE_WORKING_MONTHS,
-);
+const experienceYears = calculateExperienceYears(START_WORKING_DATE);
 ---
 
 <span>{experienceYears} {text}</span>
