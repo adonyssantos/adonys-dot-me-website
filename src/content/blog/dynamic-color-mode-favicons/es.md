@@ -2,13 +2,13 @@
 title: "Favicons dinámicos según el modo de color"
 description: "Aprende a tener un favicon dinámico según el modo de color de tu navegador."
 pubDate: "2024-09-07"
-updatedDate: "2024-09-07"
+updatedDate: "2024-09-10"
 heroImage: "/images/blog/hero/dynamic-color-mode-favicons.jpg"
 author: "Adonys"
 lang: "es"
 ---
 
-Existen dos tipos de usuarios, los del modo claro y los del modo oscuro. Practicamente todos los navegadores soportan ambos modos de color, pero esto tiene un problema y es que puede que el favicon de tu sitio web no se vea bien en uno de los dos modos. En este artículo te enseñaré a tener un favicon dinámico según el modo de color de tu navegador.
+Existen dos tipos de usuarios, los del modo claro y los del modo oscuro. Practicamente todos los navegadores soportan ambos modos de color, pero esto tiene un problema y es que el favicon de tu sitio web no se vea bien en uno de los dos modos. En este artículo te enseñaré a tener un favicon dinámico según el modo de color de tu navegador.
 
 ![Meme de una persona con una luz de una lampara en la cara, representando la sensación de usar el modo claro](/images/blog/light-mode-meme-es.jpg)
 
