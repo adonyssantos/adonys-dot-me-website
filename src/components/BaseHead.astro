@@ -11,6 +11,7 @@ import {
 import "../styles/pico.min.css";
 import "../styles/fira_code.css";
 import "../styles/global.css";
+import { BETA_FEATURES } from "../utilities/consts";
 
 type Props = {
 	title: string;
@@ -61,20 +62,24 @@ const alternateLinks = LANGUAGES_KEYS.map((_lang: LanguageKey) => {
 />
 
 <!-- Font preloads -->
-<link
-	rel="preload"
-	href="/fonts/woff2/FiraCode-Regular.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
-/>
-<link
-	rel="preload"
-	href="/fonts/woff2/FiraCode-Bold.woff2"
-	as="font"
-	type="font/woff2"
-	crossorigin
-/>
+ {
+	BETA_FEATURES.fontsPreload && (
+		<link
+			rel="preload"
+			href="/fonts/woff2/FiraCode-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/woff2/FiraCode-Bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+	)
+ }
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
