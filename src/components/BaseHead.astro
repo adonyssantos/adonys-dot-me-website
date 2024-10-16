@@ -8,6 +8,9 @@ import {
 	type LanguageKey,
 	LANGUAGES_KEYS,
 } from "../i18n/utils";
+import "../styles/pico.min.css";
+import "../styles/fira_code.css";
+import "../styles/global.css";
 import { BETA_FEATURES } from "../utilities/consts";
 
 type Props = {
@@ -37,15 +40,6 @@ const alternateLinks = LANGUAGES_KEYS.map((_lang: LanguageKey) => {
 	};
 });
 ---
-
-<!-- Styles -->
-<link rel="preload" href="/styles/pico.min.css" as="style" onload="this.rel='stylesheet'">
-<link rel="preload" href="/styles/fira_code.css" as="style" onload="this.rel='stylesheet'">
-<link rel="stylesheet" href="/styles/global.css">
-<noscript>
-  <link rel="stylesheet" href="/styles/pico.min.css">
-  <link rel="stylesheet" href="/styles/fira_code.css">
-</noscript>
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />

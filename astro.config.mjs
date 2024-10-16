@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import playformCompress from "@playform/compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,6 @@ export default defineConfig({
         es: "es-ES",
       }
     }
-  })],
+  }), playformCompress()],
   prefetch: true
 });
