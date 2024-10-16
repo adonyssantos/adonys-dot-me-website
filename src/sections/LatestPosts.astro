@@ -7,43 +7,44 @@ type Props = { lang: LanguageKey };
 
 const { lang } = Astro.props;
 const posts = (await getBlogPosts())
-    .filter((blog) => blog?.data?.lang === lang)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-    .slice(0, 3);
+  .filter((blog) => blog?.data?.lang === lang)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 const t = useTranslations(lang);
 ---
 
 <section id="latest-posts">
-    <hgroup>
-        <h2>{t("section.latest_posts.title")}</h2>
-        <p>{t("section.latest_posts.description")}</p>
-    </hgroup>
-    {
-        posts.map((post) => (
-            <article>
-                <h3 hidden aria-hidden="true">
-                    {post.data.title}
-                </h3>
-                <hgroup>
-                    <strong>{post.data.title}</strong> •{" "}
-                    <em>
-                        <FormattedDate lang={lang} date={post.data.pubDate} />
-                    </em>
-                    <p>{post.data.description}</p>
-                </hgroup>
-                <p>
-                    <a
-                        href={`/${lang || ""}/blog/${post.blog_slug}`}
-                        data-astro-prefetch="viewport"
-                        area-label={`${t("section.latest_posts.read_more")} ${post.data.title}`}
-                    >
-                        {t("section.latest_posts.read_more")}
-                    </a>
-                </p>
-            </article>
-        ))
-    }
-    <a href={`/${lang || ""}/blog`} data-astro-prefetch="viewport"
-        >{t("section.latest_posts.view_all")}</a
-    >
+  <hgroup>
+    <h2>{t("section.latest_posts.title")}</h2>
+    <p>{t("section.latest_posts.description")}</p>
+  </hgroup>
+  {
+    posts.map((post) => (
+      <article>
+        <h3 hidden aria-hidden="true">
+          {post.data.title}
+        </h3>
+        <hgroup>
+          <strong>{post.data.title}</strong> •{" "}
+          <em>
+            <FormattedDate lang={lang} date={post.data.pubDate} />
+          </em>
+          <p>{post.data.description}</p>
+        </hgroup>
+        <p>
+          <a
+            href={`/${lang || ""}/blog/${post.blog_slug}`}
+            data-astro-prefetch="viewport"
+            area-label={`${t("section.latest_posts.read_more")} ${post.data.title}`}
+          >
+            {t("section.latest_posts.read_more")}
+            <span class="sr-only">{post.data.title}</span>
+          </a>
+        </p>
+      </article>
+    ))
+  }
+  <a href={`/${lang || ""}/blog`} data-astro-prefetch="viewport"
+    >{t("section.latest_posts.view_all")}</a
+  >
 </section>
